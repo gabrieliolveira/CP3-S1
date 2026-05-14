@@ -18,12 +18,13 @@
 # Média: 31.5
 # Registros críticos: 2
 
-temperaturas = [[28, 31, 34, 33], [25, 27, 29, 28], [32, 35, 36, 34], [24, 26, 25, 27]]
+salas = [[28, 31, 34, 33], [25, 27, 29, 28], [32, 35, 36, 34], [24, 26, 25, 27]]
 
 cont = 0
-for sala in temperaturas:
+for sala in salas:
     cont += 1
     cont_critico = 0
+    print(sala)
     print(f'Sala:  {cont}')
     print(f'Média: {sum(sala)/len(sala)}')
     for temperatura in sala:
