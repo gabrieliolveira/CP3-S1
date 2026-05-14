@@ -18,9 +18,11 @@
 # Média: 31.5
 # Registros críticos: 2
 
+
 salas = [[28, 31, 34, 33], [25, 27, 29, 28], [32, 35, 36, 34], [24, 26, 25, 27]]
 
 cont = 0
+sala_maior_risco = 0
 for sala in salas:
     cont += 1
     cont_critico = 0
@@ -30,4 +32,7 @@ for sala in salas:
     for temperatura in sala:
         if temperatura >=33:
             cont_critico+=1
+            if cont_critico > sala_maior_risco:
+                sala_maior_risco = cont
     print(f'Registros críticos:  {cont_critico}\n')
+print(f'Sala com maior risco: Sala {sala_maior_risco}')
